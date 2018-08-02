@@ -1,8 +1,5 @@
-<import src="../_partials/topTip.wxml" />
 
 <view class="page">
-    <template is="topTip" data="{{showMsg: showTopTips, msg: topTipMsg}}" />
-    
     <view class="page__bd sbox">
         <form bindsubmit="formSubmit">
         <!-- diy 模块 -->
@@ -37,7 +34,7 @@
                         </block>
                     </view>
                 </view>
-                <view class="weui-cell block__sidebar padding"  bindtap="handPlus" >
+                <view class="weui-cell block__sidebar padding"  bindtap="handPlus" wx:if="{{index==blocks.length-1}}">
                     <view class="weui-cell__bd">
                         <view class="icon icon-plus"data-order="{{index+1}}"></view>
                     </view>
