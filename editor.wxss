@@ -1,7 +1,7 @@
 /* pages/report/content.wxss */
 .icon{
-    width: 36rpx;
-    height: 36rpx;
+    width: 60rpx;
+    height: 60rpx;
 }
 .icon-close{
     background-image: url(http://mat1.gtimg.com/xian/dcls2017/icon-close.png);
@@ -20,8 +20,8 @@
     background-size: 100%;
 }
 .block__item-type-text{
-    width: 80rpx;
-    height: 80rpx;
+    width: 160rpx;
+    height: 160rpx;
     margin:0 auto;
     background-image: url(http://mat1.gtimg.com/xian/dcls2017/icon-text.png);
     background-size: 100%;
@@ -52,6 +52,7 @@
 }
 .block__item>.weui-cell{
     padding: 0;
+    position: relative;
 }
 .block__item .weui-cell:before{
     left:0;

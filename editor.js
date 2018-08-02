@@ -23,19 +23,6 @@ Page({
     fadeOutRight.translate3d("100%", 0, 0).step();
     this.fadeOutRight = fadeOutRight;
   },
-  showMsg: function(msg) {
-    var self = this;
-    self.setData({
-      'topTipMsg': msg,      
-      'showTopTips': true
-    })
-    setTimeout(function(){
-      self.setData({
-        'showTopTips': false,
-        'topTipMsg': ''
-      })
-    }, 2000);
-  },
   handPlus: function(e){
     // 绑定增加编辑窗    
     let _order = e.target.dataset.order;
@@ -174,7 +161,10 @@ Page({
     let self = this;
 
     if(this.data.blocks[0].value.length<1){
-      this.showMsg('请写些内容吧');
+      wx.showToast({
+        title: '请写些内容吧',
+        icon: 'none'
+      });
       return;      
     }
 
